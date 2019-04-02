@@ -33,9 +33,9 @@ $("form#new-contact").submit(function(event) {
     $("#show-contact h2").text(newContact.fullContact());
     $(".first-name").text(newContact.firstName);
     $(".last-name").text(newContact.lastName);
-    $(".first-email").text(newEmail.firstEmail);
-
-    $("form").not().css("display","none");
+    $(".first-email").text(newContact.firstEmail);
   });
+
+  $("form#new-contact").not().css("display", "none");
   });
 })
