@@ -3,22 +3,31 @@ h1 {
   font-weight: bold;
 }
 
+h3 {
+  text-align: center;
+}
+
 #show-contact {
   display: none;
-  padding-left: 50px;
 
 }
 
 .container-well {
-  background-color: #6699ff;
+  background-color: #678ECF;
 }
 
 #logbook {
 
+
+}
+
+#jumbotron {
+
+c
 }
 
 button {
-  background-color: #6699ff;
+  background-color: #678ECF;
       border-radius: 4px;
       border: none;
       color: white;
