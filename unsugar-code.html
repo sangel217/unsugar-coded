@@ -1,41 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <link href="css/bootstrap.css" rel ="stylesheet" type="text/css" media="all">
-    <link href="css/styles1.css" rel="stylesheet" type="text/css">
-    <title>Diabetes Meal Planning</title>
+    <meta charset="utf-8">
+    <title>LogBook</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1><font color="#678ECF">Unsugar</font><i>coded</i></h1>
-    <br>
-    <h1>Diabetes Meal Planning</h1>
+    <div class="jumbotron">
+      <h3>Your daily carb intake. Please insert your daily meals.</h1>
+    </div>
+<div class="container" id="logbook">
+  <form>
 
-    <br>
-    <h3>Managing blood sugar levels is the key to living well with diabetes and avoiding some of the more severe health problems it can cause. This means that following a healthful diet is essential for people with diabetes. A healthful balanced meal should contain non-starchy vegetables, protein and high-fiber carbohydrates.</h3>
-    <br>
-    <h2>Below are some healthy meal examples for those with diabetes.</h2>
-    <br>
-    <p><strong>Breakfast:</strong>  Omelet: one whole egg, spinach, mushrooms, bell pepper, ½ cup black beans, 1 cup of berries on the side</p>
-    <p><strong>Lunch:</strong> Salad: 2 cups spinach, ¼ cup tomatoes, 1 oz cheddar cheese, one boiled chopped egg, 2 Tbsp yogurt dressing, ¼ cup grapes, 1 tsp pumpkin seeds, ¼ cup roasted chickpeas</p>
-    <p><strong>Snack:</strong> 1 cup low fat plain Greek yogurt mixed with half a banana</p>
-    <p><strong>Dinner:</strong> 2 oz salmon filet, one medium baked potato, 1 tsp butter, 1 ½ cups steamed asparagus</p>
+      <div class="row">
 
-    <h2>Diabetes Plate Method</h2>
-    <img src="images/plate-method.jpg" alt="picture of plate method example">
-    <br>
-    <p>Try using the diabetes plate method when creating meals. The diabetes plate method uses the image of a standard, 9-inch dinner divided as follows:</p>
-    <ul>
-      <li>50 percent non-starchy vegetables</li>
-      <li>25 percent protein</li>
-      <li>25 percent high-fiber carbohydrates</li>
-      </ul>
-    </li>
-    <h2>Here are some more resources for healthy meal planning:</h2>
-    <ul>
-      <li><a href="http://www.diabetes.org/food-and-fitness/food/what-can-i-eat/food-tips/quick-meal-ideas/">Quick Meal Ideas from the American Diabetes Association</a></li>
-      <li><a href="https://www.eatright.org/find-an-expert">Find a Registered Dietitian at Eat Right</a></li>
-      <li><a href="http://www.diabetes.org/food-and-fitness/food/what-can-i-eat/understanding-carbohydrates/glycemic-index-and-diabetes.html">American Diabetes Association Glycemic Index</a></li>
-      <li><a href="https://dlife.com/diabetes-blog/connect-with-a-diabetes-support-group/">Find a Diabetes Support Group</a></li>
-    </ul>
-  </body>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="Breakfast">Breaksfast</label>
+            <input type="text" class="form-control" id="breakfast" placeholder="Breakfast item">
+            <input type="text" class="form-control" id="breakfast" placeholder="Breakfast item">
+            <input type="text" class="form-control" id="breakfast" placeholder="Breakfast item">
+          </div>
+
+          <div class="form-group">
+            <label for="Lunch">Lunch</label>
+            <input type="text" class="form-control" id="lunch" placeholder="Lunch item">
+            <input type="text" class="form-control" id="lunch" placeholder="Lunch item">
+            <input type="text" class="form-control" id="lunch" placeholder="Lunch item">
+          </div>
+
+          <div class="form-group">
+            <label for="Dinner">Dinner</label>
+            <input type="text" class="form-control" id="dinner" placeholder="Dinner item">
+            <input type="text" class="form-control" id="dinner" placeholder="Dinner item">
+            <input type="text" class="form-control" id="dinner" placeholder="Dinner item">
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="carbs">Breakfast Carbs</label>
+            <input type="number" class="form-control" id="b-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="b-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="b-carbs" placeholder="Carbs">
+          </div>
+
+          <div class="form-group">
+            <label for="carbs">Lunch Carbs</label>
+            <input type="number" class="form-control" id="l-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="l-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="l-carbs" placeholder="Carbs">
+          </div>
+
+          <div class="form-group">
+            <label for="carbs">Dinner Carbs</label>
+            <input type="number" class="form-control" id="d-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="d-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="d-carbs" placeholder="Carbs">
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="sugar">Breakfast Sugar</label>
+            <input type="number" class="form-control" id="b-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="b-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="b-sugar" placeholder="Sugar">
+          </div>
+
+          <div class="form-group">
+            <label for="sugar">Lunch Sugar</label>
+            <input type="number" class="form-control" id="l-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="l-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="l-sugar" placeholder="Sugar">
+          </div>
+
+          <div class="form-group">
+            <label for="sugar">Dinner Sugar</label>
+            <input type="number" class="form-control" id="d-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="d-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="d-sugar" placeholder="Sugar">
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="timestamp">Time</label>
+            <input type="time" class="form-control" id="b-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="b-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="b-timestam" placeholder="Time">
+          </div>
+
+          <div class="form-group">
+            <label for="timestamp">Time</label>
+            <input type="time" class="form-control" id="l-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="l-timestam" placeholder="Time">
+            <input type="time" class="form-control" id="l-timestamp" placeholder="Time">
+          </div>
+
+          <div class="form-group">
+            <label for="timestamp">Time</label>
+            <input type="time" class="form-control" id="d-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="d-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="d-timestamp" placeholder="Time">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+          <label for="snacks">Snacks</label>
+          <input type="text" class="form-control" id="snack" placeholder="Snack item">
+          <input type="text" class="form-control" id="snack" placeholder="Snack item">
+          </div>
+          </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="carbs">Snacks Carbs</label>
+            <input type="number" class="form-control" id="s-carbs" placeholder="Carbs">
+            <input type="number" class="form-control" id="s-carbs" placeholder="Carbs">
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="sugar">Snack Sugar</label>
+            <input type="number" class="form-control" id="s-sugar" placeholder="Sugar">
+            <input type="number" class="form-control" id="s-sugar" placeholder="Sugar">
+          </div>
+        </div>
+
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="timestamp">Time</label>
+            <input type="time" class="form-control" id="s-timestamp" placeholder="Time">
+            <input type="time" class="form-control" id="s-timestamp" placeholder="Time">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+
+  </form>
+
+</div>
+</body>
 </html>
