@@ -1,0 +1,26 @@
+img {
+  max-width: 500px;
+
+}
+
+h2 {
+  color: #678ECF;
+}
+
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+body {
+  padding-left: 5%;
+}
+
+li {
+  font-size: 20px;
+}
