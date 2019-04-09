@@ -39,9 +39,9 @@ Carbs.prototype.carbAlert = function(){
 }
 
 Sugars.prototype.sugarAlert = function(){
-  if(this.sugars >= 350){
+  if(this.breakfast + this.lunch + this.dinner + this.snack >= 350){
     return("You're sugar is high, consider calling your doctor!")
-  } else if(this.sugars <= 70){
+  } else if(this.breakfast + this.lunch + this.dinner + this.snack <= 70){
     return("You're sugar is low, consider calling your doctor!")
   }
 }
