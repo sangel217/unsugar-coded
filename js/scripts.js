@@ -25,12 +25,16 @@ function Sugars(breakfast, lunch, dinner, snack) {
 }
 
 Carbs.prototype.carbTotal = function(){
+  return (this.breakfast + this.lunch + this.dinner + this.snack);
+}
+
+Carbs.prototype.carbAlert = function(){
   if(this.breakfast + this.lunch + this.dinner + this.snack >= 181){
-    alert("You should consider lowering your daily carb intake! The recommended daily total amount is 180 grams. Each meal should have a total of 60 grams and snacks no more than 15 grams.")
+    return("You should consider lowering your daily carb intake! The recommended daily total amount is 180 grams. Each meal should have a total of 60 grams and snacks no more than 15 grams.")
   } else if(this.breakfast + this.lunch + this.dinner + this.snack <= 44){
-    alert("You should consider increasing your daily carb intake. Each meal should have 15-60 grams of carbs and no more than 15 grams of carbs for snacks.")
+    return("You should consider increasing your daily carb intake. Each meal should have 15-60 grams of carbs and no more than 15 grams of carbs for snacks.")
   } else {
-    alert("Great job with your carb counting!")
+    return("Great job with your carb counting!")
   }
 }
 
@@ -74,13 +78,24 @@ $("form#new-contact").submit(function(event) {
   });
 
 
-  $('#log').click(function(){
+  $('#log').click(function(event){
+    event.preventDefault();
     var inputBCarbs = parseInt($('input#b-carbs').val());
     var inputLCarbs = parseInt($('input#l-carbs').val());
     var inputDCarbs = parseInt($('input#d-carbs').val());
     var inputSCarbs = parseInt($('input#s-carbs').val());
     var newTotalCarbs = new Carbs(inputBCarbs, inputLCarbs, inputDCarbs, inputSCarbs);
 
-    newTotalCarbs.carbTotal();
+    $('.results').append('<p>' + "You're total carbs for today is:" + ' ' + newTotalCarbs.carbTotal() + '</p>');
+    $('.results').append('<p>' + newTotalCarbs.carbAlert() + '</p>');
+
+    var inputBSugar = parseInt($('input#b-sugar').val());
+    var inputLSugar = parseInt($('input#l-sugar').val());
+    var inputDSugar = parseInt($('input#d-sugar').val());
+    var inputSSugar = parseInt($('input#s-sugar').val());
+    var newSugarAlert = new Sugars(inputBSugar, inputLSugar, inputDSugar, inputSSugar)
+
+    $('.results').append('<p>' + newSugarAlert.sugarAlert() + '</p>')
+
   })
 })
