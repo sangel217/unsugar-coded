@@ -1,7 +1,6 @@
 h1 {
   font-size: 75px;
   font-weight: bold;
-  
 
 }
 
@@ -39,6 +38,10 @@ img {
 
 #logbook {
   padding-left: 15%;
+}
+
+#show-log {
+  display: none;
 }
 
 button {
