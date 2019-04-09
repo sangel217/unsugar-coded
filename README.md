@@ -2,7 +2,8 @@
 
 ### Team Week Project for Epicodus Intro Course, 04.01.2019
 
-## By Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzalez
+## By Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzales
+
 
 ## Description
 
@@ -34,6 +35,7 @@ JQuery
 
 ## Legal
 
-Copyright (c) 2019 Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzalez. All Rights Reserved.
+Copyright (c) 2019 Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzales All Rights Reserved.
+
 
 This software is licensed under the MIT license.

@@ -24,12 +24,25 @@ function Sugars(breakfast, lunch, dinner, snack) {
   this.snack = snack;
 }
 
+Carbs.prototype.carbTotal = function(){
+  return (this.breakfast + this.lunch + this.dinner + this.snack);
+}
+
+Carbs.prototype.carbAlert = function(){
+  if(this.breakfast + this.lunch + this.dinner + this.snack >= 181){
+    return("You should consider lowering your daily carb intake! The recommended daily total amount is 180 grams. Each meal should have a total of 60 grams and snacks no more than 15 grams.")
+  } else if(this.breakfast + this.lunch + this.dinner + this.snack <= 44){
+    return("You should consider increasing your daily carb intake. Each meal should have 15-60 grams of carbs and no more than 15 grams of carbs for snacks.")
+  } else {
+    return("Great job with your carb counting!")
+  }
+}
 
 Sugars.prototype.sugarAlert = function(){
   if(this.sugars >= 350){
-    alert("You're sugar is high, consider calling your doctor!")
+    return("You're sugar is high, consider calling your doctor!")
   } else if(this.sugars <= 70){
-    alert("You're sugar is low, consider calling your doctor!")
+    return("You're sugar is low, consider calling your doctor!")
   }
 }
 
@@ -65,52 +78,24 @@ $("form#new-contact").submit(function(event) {
   $("form#new-contact").not().css("display", "none");
   });
 
-  $('#log').click(function(e){
-    e.preventDefault();
-    var b1 = $('#breakfast1').val();
-    var b2 = $('#breakfast2').val();
-    var b3 = $('#breakfast3').val();
-    var inputBCarbs1 = parseInt($('input#b-carbs1').val());
-    var inputBCarbs2 = parseInt($('input#b-carbs2').val());
-    var inputBCarbs3 = parseInt($('input#b-carbs3').val());
-    var bCarbTotal = inputBCarbs1 + inputBCarbs2 + inputBCarbs3;
+  $('#log').click(function(event){
+    event.preventDefault();
+    var inputBCarbs = parseInt($('input#b-carbs').val());
+    var inputLCarbs = parseInt($('input#l-carbs').val());
+    var inputDCarbs = parseInt($('input#d-carbs').val());
+    var inputSCarbs = parseInt($('input#s-carbs').val());
+    var newTotalCarbs = new Carbs(inputBCarbs, inputLCarbs, inputDCarbs, inputSCarbs);
 
-    var l1 = $('#lunch1').val();
-    var l2 = $('#lunch2').val();
-    var l3 = $('#lunch3').val();
-    var inputLCarbs1 = parseInt($('input#l-carbs1').val());
-    var inputLCarbs2 = parseInt($('input#l-carbs2').val());
-    var inputLCarbs3 = parseInt($('input#l-carbs3').val());
-    var lCarbTotal = inputLCarbs1 + inputLCarbs2 + inputLCarbs3;
+    $('.results').append('<p>' + "You're total carbs for today is:" + ' ' + newTotalCarbs.carbTotal() + '</p>');
+    $('.results').append('<p>' + newTotalCarbs.carbAlert() + '</p>');
 
-    var d1 = $('#dinner1').val();
-    var d2 = $('#dinner2').val();
-    var d3 = $('#dinner3').val();
-    var inputDCarbs1 = parseInt($('input#d-carbs1').val());
-    var inputDCarbs2 = parseInt($('input#d-carbs2').val());
-    var inputDCarbs3 = parseInt($('input#d-carbs3').val());
-    var dCarbTotal = inputDCarbs1 + inputDCarbs2 + inputDCarbs3;
+    var inputBSugar = parseInt($('input#b-sugar').val());
+    var inputLSugar = parseInt($('input#l-sugar').val());
+    var inputDSugar = parseInt($('input#d-sugar').val());
+    var inputSSugar = parseInt($('input#s-sugar').val());
+    var newSugarAlert = new Sugars(inputBSugar, inputLSugar, inputDSugar, inputSSugar)
 
-    var s1 = $('#snack1').val();
-    var s2 = $('#snack2').val();
-    var s3 = $('#snack3').val();
-    var inputSCarbs1 = parseInt($('input#s-carbs1').val());
-    var inputSCarbs2 = parseInt($('input#s-carbs2').val());
-    var inputSCarbs3 = parseInt($('input#s-carbs3').val());
-    var sCarbTotal = inputSCarbs1 + inputSCarbs2 + inputSCarbs3;
-
-    if(bCarbTotal + lCarbTotal + dCarbTotal + sCarbTotal >= 181){
-      alert("You should consider lowering your daily carb intake! The recommended daily total amount is 180 grams. Each meal should have a total of 60 grams and snacks no more than 15 grams.")
-    } else if(this.breakfast + this.lunch + this.dinner + this.snack <= 44){
-      alert("You should consider increasing your daily carb intake. Each meal should have 15-60 grams of carbs and no more than 15 grams of carbs for snacks.")
-    } else {
-      alert("Great job with your carb counting!")
-    }
-
-    $("ul#contacts").append("<span>" + bCarbTotal + lCarbTotal + dCarbTotal + sCarbTotal + "</span>");
-    console.log(bCarbTotal);
-
-    resetFields();
+    $('.results').append('<p>' + newSugarAlert.sugarAlert() + '</p>')
 
   })
 })
