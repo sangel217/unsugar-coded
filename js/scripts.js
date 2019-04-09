@@ -40,9 +40,9 @@ Carbs.prototype.carbAlert = function(){
 
 Sugars.prototype.sugarAlert = function(){
   if(this.sugars >= 350){
-    alert("You're sugar is high, consider calling your doctor!")
+    return("You're sugar is high, consider calling your doctor!")
   } else if(this.sugars <= 70){
-    alert("You're sugar is low, consider calling your doctor!")
+    return("You're sugar is low, consider calling your doctor!")
   }
 }
 
@@ -72,11 +72,11 @@ $("form#new-contact").submit(function(event) {
     $(".first-name").text(newContact.firstName);
     $(".last-name").text(newContact.lastName);
     $(".first-email").text(newContact.email);
+
   });
 
   $("form#new-contact").not().css("display", "none");
   });
-
 
   $('#log').click(function(event){
     event.preventDefault();

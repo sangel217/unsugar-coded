@@ -4,6 +4,7 @@
 
 ## By Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzales
 
+
 ## Description
 
 This is an app for people with diabetes to track their food diary and sugar logs. The user can create a profile and then input food as well as total carbs for each meal. The user can also enter sugar levels at each meal. The app will alert the user when sugar levels are below 70 or above 350 which are dangerous levels. This app is an exercise using JavaScript object orientation and html forms with bootstrap.
@@ -35,5 +36,6 @@ JQuery
 ## Legal
 
 Copyright (c) 2019 Sarah Angel, Priscila Lizcano, Lela Smith, Nina Nikoghosyan, Greta Gabrielyan, Uriel Gonzales All Rights Reserved.
+
 
 This software is licensed under the MIT license.
